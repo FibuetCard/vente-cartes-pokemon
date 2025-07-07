@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Commande</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Finaliser la commande</h1>
+  </header>
+  <main>
+    <div id="recap"></div>
+
+    <h3>Vos informations</h3>
+    <form>
+      <label>Nom : <input type="text" required /></label><br/>
+      <label>Email : <input type="email" required /></label><br/>
+      <label>Adresse : <input type="text" required /></label><br/>
+      <p><strong>Choix du point Mondial Relay (fictif) :</strong></p>
+      <select required>
+        <option value="">-- Choisissez un point relais --</option>
+        <option>Relais A - Centre-ville</option>
+        <option>Relais B - La Poste</option>
+      </select><br/><br/>
+      <button type="submit">Valider la commande</button>
+    </form>
+  </main>
+  <script>
+    const panier = JSON.parse(localStorage.getItem("panier")) || [];
+    const recap = document.getElementById("recap");
+    let html = "<h2>Récapitulatif du panier</h2><ul>";
+    let total = 0;
+    panier.forEach(item => {
+      html += `<li>${item.nom} - ${item.prix}€</li>`;
+      total += item.prix;
+    });
+    html += `</ul><p><strong>Total : ${total}€</strong></p>`;
+    recap.innerHTML = html;
+  </script>
+</body>
+</html>
