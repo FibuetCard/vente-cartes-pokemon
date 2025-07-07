@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ef5350;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.catalogue {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px;
+}
+
+.carte {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  display: block;
+  margin: 40px auto;
+  padding: 10px 20px;
+  background-color: #42a5f5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
