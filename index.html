@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vente de Cartes Pokémon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Ma Collection de Cartes Pokémon</h1>
+  </header>
+  <main>
+    <div class="catalogue">
+      <div class="carte">
+        <img src="https://images.pokemontcg.io/base1/4.png" alt="Carte Dracaufeu"/>
+        <h2>Dracaufeu</h2>
+        <p>Prix : 50€</p>
+        <button onclick="ajouterAuPanier('Dracaufeu', 50)">Ajouter au panier</button>
+      </div>
+      <div class="carte">
+        <img src="https://images.pokemontcg.io/base1/15.png" alt="Carte Tortank"/>
+        <h2>Tortank</h2>
+        <p>Prix : 30€</p>
+        <button onclick="ajouterAuPanier('Tortank', 30)">Ajouter au panier</button>
+      </div>
+    </div>
+    <a href="checkout.html" class="btn">Passer commande</a>
+  </main>
